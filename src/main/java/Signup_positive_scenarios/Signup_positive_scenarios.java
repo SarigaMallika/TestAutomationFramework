@@ -29,7 +29,7 @@ public class Signup_positive_scenarios extends Generic_function {
 	public static void signup_positive_tc_002() throws IOException{
 		try{
 			click("login_link");
-			value1=driver.findElement(By.xpath(OR_reader("Object_Locator", "login_link"))).isDisplayed();
+			value1=driver.findElement(By.xpath(OR_reader("Object_Locator", "login_phone_number"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			//browser_refresh();
 		} catch (Exception e) {
@@ -102,7 +102,7 @@ public class Signup_positive_scenarios extends Generic_function {
 			driver.findElement(By.xpath(OR_reader("Object_Locator", "signup_confirm_password"))).sendKeys(td_reader("signup_confirm_password",2));
 			click("signup_terms_and_conditions");
 			click("signup");	
-			value1=driver.findElement(By.xpath(OR_reader("Object_Locator", "signup"))).isDisplayed();
+			value1=driver.findElement(By.xpath(OR_reader("Object_Locator", "otp"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 		} catch (IOException e) {
 			e.printStackTrace();
